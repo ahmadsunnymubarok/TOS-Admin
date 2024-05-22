@@ -36,7 +36,7 @@ const Transaction = () => {
           <tr>
             <td>
               <div className="flex gap-2.5 items-center">
-                <Image src={avatar} alt="" width={40} height={40} />
+                <Image src={avatar} alt="avatar" width={40} height={40} />
                 Sunny Mubarok
               </div>
             </td>

@@ -57,6 +57,7 @@ const NavBar = () => {
               <div className="flex flex-col gap-2">
                 {links.map((item) => (
                   <Link
+                    key={item.name}
                     href={item.href}
                     className=" border-b hover:bg-[#2e374a]"
                   >

@@ -59,12 +59,13 @@ const Sidebar = () => {
   return (
     <div className=" sticky top-10">
       <div className="flex flex-col items-center mb-5 ">
-        <Image src={logo} width={150} height={75} />
+        <Image src={logo} width={150} height={75} alt="avatar" />
         <span className="">TOSI INDONESIA</span>
       </div>
       <div className="flex items-center gap-5 mb-5 ">
         <Image
           src={avatar}
+          alt="avatar"
           width={50}
           height={50}
           className=" rounded-[50%] object-cover bg-white"
