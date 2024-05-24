@@ -1,7 +1,7 @@
 import Card from "../ui/dashboard/card";
 import Chart from "../ui/dashboard/chart";
-import Rightbar from "../ui/dashboard/rightbar";
-import Transaction from "../ui/dashboard/transaction";
+
+import Transaction from "../ui/dashboard/transaction/transaction";
 
 const Dashboard = () => {
   return (

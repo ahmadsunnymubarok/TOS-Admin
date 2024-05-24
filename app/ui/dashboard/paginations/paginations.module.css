@@ -1,0 +1,9 @@
+.buttons button {
+  padding: 5px 10px;
+  background: gray;
+  border-radius: 5px;
+}
+
+.buttons button:disabled {
+  cursor: not-allowed;
+}

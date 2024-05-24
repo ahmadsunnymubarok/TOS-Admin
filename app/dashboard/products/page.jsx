@@ -1,27 +1,28 @@
 import Link from "next/link";
+import Paginations from "@/app/ui/dashboard/paginations/paginations";
 import Search from "@/app/ui/dashboard/search";
 import Image from "next/image";
 import styles from "@/app/ui/dashboard/history/history.module.css";
-import Paginations from "@/app/ui/dashboard/paginations/paginations";
 
-const History = () => {
+const Products = () => {
   return (
     <div className=" mt-5 rounded-md p-5 bg-[#182237]">
       <div className="flex justify-between items-center">
-        <Search placeholder={`seearch for a user..`} />
-        <Link href="/dashboard/history/add">
+        <Search placeholder={`seearch for a products..`} />
+        <Link href="/dashboard/products/add">
           <button className="p-2.5 bg-[#5d57c9] text-white border-none rounded-sm">
-            add user
+            add products
           </button>
         </Link>
       </div>
       <table className={`${styles.table}  w-full`}>
         <thead>
           <tr>
-            <td>Name</td>
-            <td> Email</td>
+            <td>Tite</td>
+            <td>Description</td>
+            <td>Price</td>
             <td> Created at</td>
-            <td> Role</td>
+            <td>Stock</td>
             <td> Status</td>
             <td> Action</td>
           </tr>
@@ -37,16 +38,17 @@ const History = () => {
                   height={40}
                   className=" rounded-lg object-cover"
                 />
-                ahmad sunny
+                Vending Machine
               </div>
             </td>
-            <td>ahmad@gmail.com</td>
-            <td>12.12.2024</td>
-            <td> admin</td>
-            <td> active</td>
+            <td>Lorem, ipsum dolor sit amet consectetur</td>
+            <td>Rp. 25.000</td>
+            <td>24-01-2024</td>
+            <td> 24/pcs</td>
+            <td> available</td>
             <td>
               <div className={` ${styles.buttons} gap-2.5 flex`}>
-                <Link href="/dashboard/history/add/id">
+                <Link href="/">
                   <button className="bg-green-900"> view </button>
                 </Link>
                 <button className="bg-red-900">delete </button>
@@ -61,4 +63,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default Products;

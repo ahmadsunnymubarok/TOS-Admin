@@ -1,5 +1,6 @@
 import Image from "next/image";
 import avatar from "@/public/noavatar.png";
+import styles from "./transaction.module.css";
 
 const Transaction = () => {
   return (
@@ -8,7 +9,7 @@ const Transaction = () => {
         Lates Transaction
       </h2>
 
-      <table className="w-full ">
+      <table className={`${styles.table} w-full`}>
         <thead>
           <tr>
             <td>Name</td>

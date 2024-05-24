@@ -6,6 +6,7 @@ import {
   FaSlidersH,
   FaMinusSquare,
   FaSignOutAlt,
+  FaBoxes,
 } from "react-icons/fa";
 import Menulink from "./menulinks";
 import Image from "next/image";
@@ -31,6 +32,11 @@ const menuitem = [
         icon: <FaHistory />,
       },
       {
+        title: "Products",
+        href: "/dashboard/products",
+        icon: <FaBoxes />,
+      },
+      {
         title: "Report",
         href: "/dashboard/report",
         icon: <FaClone />,
@@ -41,6 +47,11 @@ const menuitem = [
   {
     title: "User",
     list: [
+      {
+        title: "Profile",
+        href: "/dashboard/profile",
+        icon: <FaSlidersH />,
+      },
       {
         title: "Setting",
         href: "/dashboard/setting",
@@ -57,7 +68,7 @@ const menuitem = [
 
 const Sidebar = () => {
   return (
-    <div className=" sticky top-10">
+    <div className=" sticky top-10 ">
       <div className="flex flex-col items-center mb-5 ">
         <Image src={logo} width={150} height={75} alt="avatar" />
         <span className="">TOSI INDONESIA</span>
