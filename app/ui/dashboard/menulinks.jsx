@@ -10,12 +10,12 @@ const Menulink = ({ item }) => {
     <Link
       href={item.href}
       className={clsx(
-        "p-5 flex align-center gap-5 hover:bg-[#2e374a] my-2.5 rounded-md",
+        "p-5  align-center gap-5 hover:bg-[#2e374a]  my-2.5  rounded-md  flex ",
         { "bg-[#2e374a]": pathname === item.href }
       )}
     >
-      {item.icon}
-      {item.title}
+      <span>{item.icon}</span>
+      <span className=" hidden md:flex">{item.title}</span>
     </Link>
   );
 };

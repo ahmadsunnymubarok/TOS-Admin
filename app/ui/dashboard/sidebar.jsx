@@ -68,8 +68,8 @@ const menuitem = [
 
 const Sidebar = () => {
   return (
-    <div className=" sticky top-10 ">
-      <div className="flex flex-col items-center mb-5 ">
+    <div className=" sticky top-10">
+      <div className="flex flex-col items-center mb-5  ">
         <Image src={logo} width={150} height={75} alt="avatar" />
         <span className="">TOSI INDONESIA</span>
       </div>
@@ -81,7 +81,7 @@ const Sidebar = () => {
           height={50}
           className=" rounded-[50%] object-cover bg-white"
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col hidden">
           <span className="font-medium"> Sunny Mub</span>
           <span className="text-xs  text-[#b7bac1]"> Administrator</span>
         </div>
@@ -89,7 +89,7 @@ const Sidebar = () => {
       <ul>
         {menuitem.map((kat) => (
           <li key={kat.title}>
-            <span className="my-2.5 text-[#b7bac1] font-bold text-xs">
+            <span className="my-2.5 text-[#b7bac1] font-bold text-xs ">
               {kat.title}
             </span>
             {kat.list.map((item) => (
@@ -98,7 +98,7 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <button className="p-5 flex gap-2.5 items.center rounded-md my-1 hover:bg-[#2e374a]  w-full ">
+      <button className="p-5 flex gap-2.5 items-center rounded-md my-1 hover:bg-[#2e374a]  w-full ">
         <FaSignOutAlt className="w-5" /> LogOut
       </button>
     </div>

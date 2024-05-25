@@ -5,8 +5,8 @@ import styles from "./id.module.css";
 const SingleUserpage = () => {
   return (
     <div className="flex gap-12 mt-5">
-      <div className="flex-[1] p-5 rounded-md bg-[#182237] font-bold">
-        <div className="w-full h-[250px] relative rounded-md overflow-hidden bg-white mb-5">
+      <div className="flex-[1] p-5 rounded-md bg-[#182237] font-bold h-max">
+        <div className="w-full h-[250px] relative rounded-md overflow-hidden bg-white mb-5 ">
           <Image src={avatar} alt="avatar" fill />
         </div>
         Sunny mubarok
