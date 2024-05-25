@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="mt-5">
       <div className=" gap-5 flex-col">
-        <div className=" flex gap-5 justify-between">
+        <div className=" grid  grid-cols-2 md:grid-cols-4 gap-5">
           <Card title="Saldo" value={1234} icon="saldo" />
           <Card title="Total order" value={1235} icon="totalorder" />
           <Card
