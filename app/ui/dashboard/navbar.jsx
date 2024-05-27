@@ -15,32 +15,38 @@ const links = [
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
+  const [search, setSearch] = useState(false);
 
-  const handleToggle = () => {
-    setShow(!show);
-  };
   const pathname = usePathname();
   return (
     <div className="flex  justify-between items-center  rounded-lg bg-[#182237] p-2.5">
       <div className="font-bold text-[#b7bac1] capitalize">
         {pathname.split("/").pop()}
       </div>
-      <div className="flex  gap-2.5 items-center">
-        <div className="flex  gap-2.5 items-center rounded-lg  p-2.5 bg-[#2e374a] ">
+      <div className="flex  gap-2.5 items-center ">
+        <div className=" hidden md:flex  gap-2.5 items-center rounded-lg  p-2.5 bg-[#2e374a] ">
+          <FaSearch className="w-5" />
           <input
             type="text"
             placeholder=" Searchhere...."
-            className="bg-transparent  border-none text-white"
+            className={` bg-transparent  border-none text-white`}
           />
         </div>
         <div className="flex gap-5">
+          <button
+            className="block md:hidden"
+            onClick={() => setSearch((search) => !search)}
+          >
+            <FaSearch className="w-5" />
+          </button>
+          <div className="relative">{search && <Search />}</div>
           <button>
             <FaBell className="w-5" />
           </button>
           <div className="relative">
             <div className="flex gap-5 items-center relative">
               <span className="font-medium"> Sunny Mub</span>
-              <button onClick={handleToggle}>
+              <button onClick={() => setShow((show) => !show)}>
                 <Image
                   src={avatar}
                   width={30}
@@ -50,9 +56,10 @@ const NavBar = () => {
               </button>
             </div>
             <div
+              show={show}
               className={` ${
                 show ? `visible` : `invisible`
-              } absolute w-56  mt-5 right-0 rounded-md p-5 bg-[#182237] origin-top-right`}
+              } absolute w-56  mt-[1.2rem] right-0 rounded-md p-5 bg-[#182237] origin-top-right`}
             >
               <div className="flex flex-col gap-2">
                 {links.map((item) => (
@@ -73,15 +80,14 @@ const NavBar = () => {
   );
 };
 
-const User = () => {
+const Search = () => {
   return (
-    <div className="absolute w-56 z-10 mt-5 right-0 bg-white origin-top-right">
-      <div className="flex flex-col">
-        <Link href="/"> Settings</Link>
-        <Link href="/">Profile</Link>
-        <Link href="/">Help</Link>
-        <Link href="">LogOut</Link>
-      </div>
+    <div className=" mt-10 right-0 absolute  visible md:invisible rounded-lg  p-2 bg-[#2e374a]   origin-top-right ">
+      <input
+        type="text"
+        placeholder=" Searchhere...."
+        className={` w-40 bg-transparent  border-none text-white`}
+      />
     </div>
   );
 };

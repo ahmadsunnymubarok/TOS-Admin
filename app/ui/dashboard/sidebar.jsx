@@ -71,7 +71,7 @@ const Sidebar = () => {
     <div className=" sticky top-10">
       <div className="flex flex-col items-center mb-5  ">
         <Image src={logo} width={150} height={75} alt="avatar" />
-        <span className="">TOSI INDONESIA</span>
+        <span className="text-center">TOS INDONESIA</span>
       </div>
       <div className="flex items-center gap-5 mb-5 ">
         <Image
@@ -81,7 +81,7 @@ const Sidebar = () => {
           height={50}
           className=" rounded-[50%] object-cover bg-white"
         />
-        <div className="flex flex-col hidden">
+        <div className="flex flex-col invisible md:visible">
           <span className="font-medium"> Sunny Mub</span>
           <span className="text-xs  text-[#b7bac1]"> Administrator</span>
         </div>
@@ -98,8 +98,9 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <button className="p-5 flex gap-2.5 items-center rounded-md my-1 hover:bg-[#2e374a]  w-full ">
-        <FaSignOutAlt className="w-5" /> LogOut
+      <button className="p-5 block  md:flex gap-2.5 items-center rounded-md my-1 hover:bg-[#2e374a]  w-full ">
+        <FaSignOutAlt className="w-5" />
+        <span className=" invisible md:visible">LogOut</span>
       </button>
     </div>
   );
