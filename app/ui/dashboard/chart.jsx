@@ -55,7 +55,7 @@ const data = [
 ];
 const Chart = () => {
   return (
-    <div className="h-[450px] bg-[#182237] p-5 rounded-md my-5">
+    <div className="h-[450px] bg-[#182237] p-5 rounded-md my-5 w-auto">
       <h2 className="mb-5 font-extralight text-2xl text-[b7bac1]">
         Order all Time
       </h2>

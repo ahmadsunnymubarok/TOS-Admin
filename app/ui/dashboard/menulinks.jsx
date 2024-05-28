@@ -15,7 +15,7 @@ const Menulink = ({ item }) => {
       )}
     >
       <span>{item.icon}</span>
-      <span className=" hidden md:flex">{item.title}</span>
+      <span className=" flex sm:hidden md:flex">{item.title}</span>
     </Link>
   );
 };
